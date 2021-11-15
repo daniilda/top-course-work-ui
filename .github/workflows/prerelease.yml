@@ -26,8 +26,8 @@ jobs:
           npm run build --if-present
   test:
     runs-on: ubuntu-latest
+    continue-on-error: true
     steps:
-
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
@@ -35,7 +35,6 @@ jobs:
       - run: |
           npm ci
           npm test
-      continue-on-error: true
   
   publish-docker-image:
     needs: [ build, test ]
