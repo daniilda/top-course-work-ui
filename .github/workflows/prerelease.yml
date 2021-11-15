@@ -35,7 +35,7 @@ jobs:
       - run: |
           npm ci
           npm test
-      - continue-on-error: true
+      continue-on-error: true
   
   publish-docker-image:
     needs: [ build, test ]
