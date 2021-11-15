@@ -33,7 +33,7 @@ jobs:
           node-version: '16.13.x'
       - run: |
           npm ci
-          npm test
+          npm test --passWithNoTests
   
   publish-docker-image:
     needs: [ build, test ]
