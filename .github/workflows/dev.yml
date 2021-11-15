@@ -23,7 +23,6 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - continue-on-error: true
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
@@ -31,6 +30,7 @@ jobs:
       - run: |
           npm ci
           npm test
+      - continue-on-error: true
       
   publish-docker-image:
     needs: [ build, test  ]
