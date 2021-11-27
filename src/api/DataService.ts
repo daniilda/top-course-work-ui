@@ -27,7 +27,7 @@ export interface IGetRecordsRequest {
 export default class DataService {
     static async getRecords(count: number = 20, offset: number = 0) {
         console.log("Fetch");
-        let result = await axios.get<IGetRecordsResponse>(`https://api.top-course-work.dev.daniilda.xyz:80/v1/common/get/grouped-average/${count}/${offset}/`)
+        let result = await axios.get<IGetRecordsResponse>(`https://api.top-course-work.dev.daniilda.xyz/v1/common/get/grouped-average/${count}/${offset}/`)
         console.log(result);
         return result;
     }
