@@ -27,7 +27,7 @@ export interface IGetRecordsRequest {
 export default class DataService {
     static async getRecords(count: number = 20, offset: number = 0) {
         console.log("Fetch");
-        let result = await axios.get<IGetRecordsResponse>(`http://api.top-course-work.dev.daniilda.xyz:80/v1/common/get/grouped-average/${count}/${offset}/`)
+        let result = await axios.get<IGetRecordsResponse>(`https://api.top-course-work.dev.daniilda.xyz:80/v1/common/get/grouped-average/${count}/${offset}/`)
         console.log(result);
         return result;
     }
@@ -46,12 +46,12 @@ export default class DataService {
 
         console.log(files)
         console.log("post");
-        let response = await axios.post(`http://api.top-course-work.dev.daniilda.xyz/v1/authentication/authenticate`, {
+        let response = await axios.post(`https://api.top-course-work.dev.daniilda.xyz/v1/authentication/authenticate`, {
             username: "user",
             password: "user",
             isExtended: true
         })
-        await axios.post(`http://api.top-course-work.dev.daniilda.xyz/v1/common/upload/dataset-bulk/`, form, {
+        await axios.post(`https://api.top-course-work.dev.daniilda.xyz/v1/common/upload/dataset-bulk/`, form, {
             headers: {
                 'Content-Type': 'multipart/form-data',
                 'Authorization': `Bearer ${response.data.jwtToken}`

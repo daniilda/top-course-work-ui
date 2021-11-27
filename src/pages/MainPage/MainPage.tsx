@@ -62,7 +62,7 @@ const MainPage = () => {
                     <div ref={lastElement} style={{height: 20, background: 'red'}}/>
                 </Tab>
                 <Tab eventKey="download" title="Скачать">
-                    <a href="http://api.top-course-work.dev.daniilda.xyz/v1/common/get/grouped-average/csv">
+                    <a href="https://api.top-course-work.dev.daniilda.xyz/v1/common/get/grouped-average/csv">
                         Скачать
                     </a>
                 </Tab>
