@@ -3,16 +3,16 @@ import RouterWrapper from "./components/RouterWrapper";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from "./components/NavBar/NavBar";
 import {Container} from "react-bootstrap";
-import {BrowserRouter} from "react-router-dom";
+import {BrowserRouter, HashRouter} from "react-router-dom";
 
 const App = () => {
     return (
-        <BrowserRouter>
+        <HashRouter>
             <NavBar/>
             <Container>
                 <RouterWrapper/>
             </Container>
-        </BrowserRouter>
+        </HashRouter>
     );
 };
 
